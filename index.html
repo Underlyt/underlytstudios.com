@@ -48,10 +48,11 @@
     height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
+    padding-bottom: 8vh;
   }
 
   .container {
@@ -62,7 +63,6 @@
     max-width: 700px;
     color: var(--white);
     position: relative;
-    top: -25vh;
   }
 
   h1 {
@@ -92,20 +92,17 @@
     color: var(--white);
   }
 
-  /* Mobile Fixes */
+  /* 📱 Mobile Tweaks */
   @media (max-width: 768px) {
     #main {
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 2rem;
-      background-position: bottom center;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 5vh;
       background-size: cover;
     }
 
     .container {
-      position: static; /* cancel top: -25vh */
-      margin: 2rem 1rem;
+      margin: 0 1rem 2rem 1rem;
       padding: 1.25rem;
     }
 
