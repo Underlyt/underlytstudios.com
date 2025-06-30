@@ -161,14 +161,11 @@
     </div>
   </div>
   <script>
-    const video = document.querySelector("video");
-    const main = document.getElementById("main");
-    const intro = document.getElementById("intro");
-
-    video.addEventListener("ended", () => {
-      intro.style.display = "none";
-      main.style.opacity = 1;
-      document.body.style.overflow = "auto";
+    // Show main content immediately, hide intro video div on page load
+    window.addEventListener('load', () => {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('main').style.opacity = 1;
+      document.body.style.overflow = 'auto';
     });
   </script>
 </body>
