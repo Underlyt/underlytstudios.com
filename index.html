@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Underlyt Studios — Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a0a2a;
+      --red: #d32f2f;
+      --white: #ffffff;
+      --font-main: 'Orbitron', sans-serif;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: var(--navy);
+      font-family: var(--font-main);
+      color: var(--white);
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      background: url('underlytstudios.png') center center no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      opacity: 0.2;
+      z-index: 0;
+    }
+    body::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to bottom, rgba(10,10,42,0.85), rgba(0,0,0,0.95));
+      z-index: 1;
+    }
+    .glow {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 50px;
+      background: radial-gradient(ellipse at center, rgba(211,47,47,0.5), transparent 70%);
+      filter: blur(25px);
+      animation: pulse 4s ease-in-out infinite;
+      z-index: 2;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; transform: translateX(-50%) scale(1); }
+      50% { opacity: 0.7; transform: translateX(-50%) scale(1.1); }
+    }
+    .content {
+      position: relative;
+      z-index: 3;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin: 0.25rem 0;
+      color: rgba(255,255,255,0.8);
+    }
+    .tagline {
+      font-size: 1.2rem;
+      margin: 2rem 0 2.5rem;
+      font-weight: 700;
+      font-style: italic;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .links a {
+      padding: 0.75rem 1.25rem;
+      border: 2px solid var(--red);
+      border-radius: 6px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .links a:hover {
+      background-color: var(--red);
+      transform: translateY(-2px);
+    }
+    .signup {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .signup form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .signup label {
+      width: 100%;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.25rem;
+    }
+    .signup input[type="email"] {
+      padding: 0.75rem;
+      border: 2px solid var(--red);
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--white);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      width: 250px;
+      max-width: 90%;
+    }
+    .signup button {
+      padding: 0.75rem 1.25rem;
+      background-color: var(--red);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .signup button:hover {
+      background-color: #b71c1c;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5rem; }
+      .tagline { font-size: 1rem; }
+      .links a { width: 100%; text-align: center; }
+      .signup form { flex-direction: column; align-items: center; }
+      .signup input[type="email"], .signup button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="content">
+    <h1>UNDERLYT STUDIOS™</h1>
+    <h2>COMING SOON</h2>
+    <h2>UNDER CONSTRUCTION</h2>
+    <div class="tagline">The Future Is Gathering</div>
+    <div class="links">
+      <a href="https://tiktok.com/@underlytstudios" target="_blank">TikTok</a>
+      <a href="https://underlyt.com" target="_blank">Underlyt.com</a>
+      <a href="https://savarkart.com" target="_blank">Savarkart.com</a>
+      <a href="mailto:hello@underlytstudios.com">Email Us</a>
+    </div>
+    <div class="signup">
+      <form action="https://YOUR_MAILING_PLATFORM_URL" method="POST" target="_blank">
+        <label for="email">Join our mailing list</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
