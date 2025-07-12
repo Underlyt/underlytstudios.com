@@ -7,8 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #0a0a2a;
-      --red: #d32f2f;
+      --navy: #010b60;
+      --red: #fa1a1e;
       --white: #ffffff;
       --font-main: 'Orbitron', sans-serif;
     }
@@ -34,7 +34,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to bottom, rgba(10,10,42,0.85), rgba(0,0,0,0.95));
+      background: linear-gradient(to bottom, rgba(1,11,96,0.85), rgba(0,0,0,0.95));
       z-index: 1;
     }
     .glow {
@@ -44,7 +44,7 @@
       transform: translateX(-50%);
       width: 300px;
       height: 50px;
-      background: radial-gradient(ellipse at center, rgba(211,47,47,0.5), transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(250,26,30,0.5), transparent 70%);
       filter: blur(25px);
       animation: pulse 4s ease-in-out infinite;
       z-index: 2;
@@ -104,51 +104,26 @@
       margin-top: 2rem;
       text-align: center;
     }
-    .signup form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-    .signup label {
-      width: 100%;
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 0.25rem;
-    }
-    .signup input[type="email"] {
-      padding: 0.75rem;
-      border: 2px solid var(--red);
-      border-radius: 6px;
-      background-color: rgba(255, 255, 255, 0.05);
-      color: var(--white);
-      font-family: var(--font-main);
-      font-size: 1rem;
-      width: 250px;
-      max-width: 90%;
-    }
-    .signup button {
-      padding: 0.75rem 1.25rem;
+    .signup a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
       background-color: var(--red);
       color: var(--white);
-      border: none;
       border-radius: 6px;
       font-weight: bold;
       font-size: 1rem;
-      cursor: pointer;
+      text-decoration: none;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    .signup button:hover {
-      background-color: #b71c1c;
+    .signup a:hover {
+      background-color: #c0161a;
       transform: translateY(-1px);
     }
     @media (max-width: 600px) {
       h1 { font-size: 1.5rem; }
       .tagline { font-size: 1rem; }
       .links a { width: 100%; text-align: center; }
-      .signup form { flex-direction: column; align-items: center; }
-      .signup input[type="email"], .signup button { width: 100%; }
+      .signup a { width: 100%; }
     }
   </style>
 </head>
@@ -166,11 +141,9 @@
       <a href="mailto:hello@underlytstudios.com">Email Us</a>
     </div>
     <div class="signup">
-      <form action="https://YOUR_MAILING_PLATFORM_URL" method="POST" target="_blank">
-        <label for="email">Join our mailing list</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required />
-        <button type="submit">Subscribe</button>
-      </form>
+      <a href="https://underlyt-studios.kit.com/8ccc270793" target="_blank" rel="noopener">
+        Join Our Mailing List
+      </a>
     </div>
   </div>
 </body>
